@@ -60,7 +60,17 @@
         top: 50%;
         transform-origin: 100%;
         transform: rotate(90deg);
-        transition: all 0.05s cubic-bezier(0, 1.54, 1, 1.43);
+        transition: all 0.05s ease;
+      }
+      .second-hand {
+        background: green;
+        transition: 0.05s cubic-bezier(0, 1.54, 1, 1.43);
+      }
+      .min-hand {
+        background: red;
+      }
+      .hour-hand {
+        background: blue;
       }
     </style>
 
@@ -72,11 +82,17 @@
         let sec = now.getSeconds();
 
         let secDegrees = (sec / 60) * 360 + 90;
+        let hourDegrees = (hour / 60) * 360 + 90;
+        let minuteDegrees = (minute / 60) * 360 + 90;
+
         secondHand.style.transform = `rotate(${secDegrees}deg)`;
-        console.log(sec);
+        hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+        minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
       }
 
       let secondHand = document.querySelector(".second-hand");
+      let hourHand = document.querySelector(".hour-hand");
+      let minuteHand = document.querySelector(".min-hand");
       setInterval(setDate, 1000);
     </script>
   </body>
