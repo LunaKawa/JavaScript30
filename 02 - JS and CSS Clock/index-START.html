@@ -9,32 +9,19 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-  </head>
-  <body>
-    <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
-      </div>
-    </div>
-
     <style>
-      html {
-        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
-        background-size: cover;
-        font-family: "helvetica neue";
-        text-align: center;
-        font-size: 10px;
-      }
-
-      body {
+      .card-body {
         margin: 0;
         font-size: 2rem;
         display: flex;
         flex: 1;
         min-height: 100vh;
         align-items: center;
+        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+        background-size: cover;
+        font-family: "helvetica neue";
+        text-align: center;
+        font-size: 10px;
       }
 
       .clock {
@@ -79,6 +66,21 @@
         background: blue;
       }
     </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="clock">
+            <div class="clock-face">
+              <div class="hand hour-hand"></div>
+              <div class="hand min-hand"></div>
+              <div class="hand second-hand"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script>
       function setDate() {
