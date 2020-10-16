@@ -17,8 +17,8 @@
         flex: 1;
         min-height: 100vh;
         align-items: center;
-        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
-        background-size: cover;
+        background-color: #000000;
+        background-image: linear-gradient(to top, #000000 0%, #04619f 74%);
         font-family: "helvetica neue";
         text-align: center;
         font-size: 10px;
@@ -34,6 +34,9 @@
         padding: 2rem;
         box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
           inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+        background-image: url(image/water-1246669_640.jpg);
+        background-size: cover;
+        background-position: bottom right;
       }
 
       .clock-face {
@@ -48,7 +51,7 @@
       .hand {
         width: 50%;
         height: 6px;
-        background: black;
+        background: white;
         position: absolute;
         top: 50%;
         transform-origin: 100%;
@@ -56,14 +59,11 @@
         transition: all 0.05s ease;
       }
       .second-hand {
-        background: green;
+        background-size: 10%;
+        background: rgb(66, 66, 66);
         transition: 0.05s cubic-bezier(0, 1.54, 1, 1.43);
       }
       .min-hand {
-        background: red;
-      }
-      .hour-hand {
-        background: blue;
       }
     </style>
   </head>
